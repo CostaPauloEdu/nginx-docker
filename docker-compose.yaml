@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  web:
+    build: .
+    container_name: web.asa.br
+    image: azevedo.paulo/web.asa.br
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./data:/var/www/application
